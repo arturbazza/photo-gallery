@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { PhotoService } from '../services/photo.service';
+import { ViewDidEnter } from '@ionic/angular';
 
 
 @Component({
@@ -9,9 +10,13 @@ import { PhotoService } from '../services/photo.service';
   styleUrls: ['tab2.page.scss']
 })
   
-export class Tab2Page {
+export class Tab2Page implements OnInit, ViewDidEnter {
 
   constructor(public photoService: PhotoService) { }
+
+  ionViewDidEnter(): void {
+    console.info("Navegou para a tab 2")
+  }
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();

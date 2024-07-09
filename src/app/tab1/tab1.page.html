@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Início
+      Formulário
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Início</ion-title>
+      <ion-title size="large">Formulário</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Início"></app-explore-container>
+
+  <form>
+    <ion-list>
+
+      <ion-item>
+        <ion-input name="name" placeholder="Cat Name" type="text" label="Cat Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input name="color" placeholder="Cor" type="text" label="Cor"></ion-input>
+      </ion-item>
+            
+    </ion-list>
+  </form>
+
 </ion-content>
